@@ -57,26 +57,10 @@ public:
 	virtual void closedImpl() override;
 
 private:
-	QModelIndex getSelectedWorld();
-	bool isWorldSafe(QModelIndex index);
-	bool worldSafetyNagQuestion();
-	void mceditError();
-
-private:
 	Ui::WorldListPage *ui;
 	QString m_iconName;
 	QString m_id;
 	QString m_displayName;
 	QString m_helpName;
-
-private slots:
-	void on_copySeedBtn_clicked();
-	void on_mcEditBtn_clicked();
-	void on_rmWorldBtn_clicked();
-	void on_addBtn_clicked();
-	void on_copyBtn_clicked();
-	void on_renameBtn_clicked();
-	void on_refreshBtn_clicked();
-	void on_viewFolderBtn_clicked();
 };
 
