@@ -1,0 +1,3 @@
+[Project]
+Name=poc_heap_corruption
+Manager=KDevCMakeManager
