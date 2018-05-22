@@ -56,10 +56,6 @@ public:
 	virtual void openedImpl() override;
 	virtual void closedImpl() override;
 
-protected:
-	bool eventFilter(QObject *obj, QEvent *ev) override;
-	bool worldListFilter(QKeyEvent *ev);
-
 private:
 	QModelIndex getSelectedWorld();
 	bool isWorldSafe(QModelIndex index);

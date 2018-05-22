@@ -51,31 +51,6 @@ bool WorldListPage::shouldDisplay() const
 	return true;
 }
 
-bool WorldListPage::worldListFilter(QKeyEvent *keyEvent)
-{
-	switch (keyEvent->key())
-	{
-	case Qt::Key_Delete:
-		on_rmWorldBtn_clicked();
-		return true;
-	default:
-		break;
-	}
-	return QWidget::eventFilter(ui->worldTreeView, keyEvent);
-}
-
-bool WorldListPage::eventFilter(QObject *obj, QEvent *ev)
-{
-	if (ev->type() != QEvent::KeyPress)
-	{
-		return QWidget::eventFilter(obj, ev);
-	}
-	QKeyEvent *keyEvent = static_cast<QKeyEvent *>(ev);
-	if (obj == ui->worldTreeView)
-		return worldListFilter(keyEvent);
-	return QWidget::eventFilter(obj, ev);
-}
-
 void WorldListPage::on_rmWorldBtn_clicked()
 {
 	auto proxiedIndex = getSelectedWorld();
