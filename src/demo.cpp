@@ -1,36 +1,36 @@
 #include <QApplication>
-#include "ui_poc.h"
+#include "ui_demo.h"
 
 namespace Ui
 {
-class POC;
+class DEMO;
 }
 
-class POC : public QWidget
+class DEMO : public QWidget
 {
 	Q_OBJECT
 
 public:
-	explicit POC(QWidget *parent = 0)
-	: QWidget(parent), ui(new Ui::POC)
+	explicit DEMO(QWidget *parent = 0)
+	: QWidget(parent), ui(new Ui::DEMO)
 	{
 		ui->setupUi(this);
 	}
-	virtual ~POC()
+	virtual ~DEMO()
 	{
 		delete ui;
 	}
 private:
-	Ui::POC *ui;
+	Ui::DEMO *ui;
 };
 
 int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
-	POC page;
-	page.show();
+	DEMO demo;
+	demo.show();
 
 	return app.exec();
 }
 
-#include "poc.moc"
+#include "demo.moc"
