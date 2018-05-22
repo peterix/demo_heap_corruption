@@ -1,18 +1,13 @@
-CMake Qt5 GUI Template
-----------------------
+# Qt 5 heap corruption
 
-You need Qt5 and CMake 2.8.11 or higher
+You need Qt5 and CMake 3.0 or higher. Not all versions of Qt5 are affected.
 
--- Build instructions --
-
+```
 cd /your/project/build
 cmake ../
 make
 
-./poc_heap_corruption
+valgrind ./poc_heap_corruption
+```
 
-
--- Tutorials and resources --
-
-Qt online docs
-https://doc.qt.io/
+Then close the window and watch the fireworks (invalid memory reads and writes).

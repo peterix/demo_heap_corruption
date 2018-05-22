@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>WorldListPage</class>
- <widget class="QWidget" name="WorldListPage">
+ <class>POC</class>
+ <widget class="QWidget" name="POC">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -43,9 +43,6 @@
           </widget>
          </item>
          <item>
-          <widget class="LineSeparator" name="separator" native="true"/>
-         </item>
-         <item>
           <widget class="QPushButton" name="renameBtn">
            <property name="text">
             <string>Rename</string>
@@ -72,9 +69,6 @@
             <string notr="true">MCEdit</string>
            </property>
           </widget>
-         </item>
-         <item>
-          <widget class="LineSeparator" name="separator_2" native="true"/>
          </item>
          <item>
           <widget class="QPushButton" name="copySeedBtn">
@@ -143,14 +137,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>LineSeparator</class>
-   <extends>QWidget</extends>
-   <header>LineSeparator.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>worldTreeView</tabstop>

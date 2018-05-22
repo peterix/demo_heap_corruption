@@ -1,22 +1,14 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.0)
 project(poc_heap_corruption)
 
-# Find includes in corresponding build directories
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-# Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
 
-# Find the QtWidgets library
 find_package(Qt5Widgets CONFIG REQUIRED)
 
 set(poc_heap_corruption_SRC
-  src/main.cpp
-  src/LineSeparator.cpp
-  src/WorldListPage.cpp
+  src/poc.cpp
 )
-
-# Create code from a list of Qt designer ui files.
-set(CMAKE_AUTOUIC ON)
 
 add_executable(poc_heap_corruption ${poc_heap_corruption_SRC})
 target_include_directories(poc_heap_corruption PRIVATE src)
