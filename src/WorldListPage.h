@@ -17,50 +17,19 @@
 
 #include <QWidget>
 
-#include "BasePage.h"
-
-class WorldList;
 namespace Ui
 {
 class WorldListPage;
 }
 
-class WorldListPage : public QWidget, public BasePage
+class WorldListPage : public QWidget
 {
 	Q_OBJECT
 
 public:
-	explicit WorldListPage(QString id,
-						   QString iconName, QString displayName, QString helpPage = "",
-						   QWidget *parent = 0);
+	explicit WorldListPage(QWidget *parent = 0);
 	virtual ~WorldListPage();
-
-	virtual QString displayName() const override
-	{
-		return m_displayName;
-	}
-	virtual QIcon icon() const override
-	{
-		return QIcon();
-	}
-	virtual QString id() const override
-	{
-		return m_id;
-	}
-	virtual QString helpPage() const override
-	{
-		return m_helpName;
-	}
-	virtual bool shouldDisplay() const override;
-
-	virtual void openedImpl() override;
-	virtual void closedImpl() override;
-
 private:
 	Ui::WorldListPage *ui;
-	QString m_iconName;
-	QString m_id;
-	QString m_displayName;
-	QString m_helpName;
 };
 

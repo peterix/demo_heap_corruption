@@ -15,42 +15,14 @@
 
 #include "WorldListPage.h"
 #include "ui_WorldListPage.h"
-#include <QEvent>
-#include <QKeyEvent>
-#include <QClipboard>
-#include <QMessageBox>
-#include <QTreeView>
-#include <QInputDialog>
-#include <QDebug>
 
-WorldListPage::WorldListPage
-(
-	QString id,
-	QString iconName,
-	QString displayName, QString helpPage,
-	QWidget *parent
-)
-: QWidget(parent), ui(new Ui::WorldListPage), m_iconName(iconName), m_id(id), m_displayName(displayName), m_helpName(helpPage)
+WorldListPage::WorldListPage(QWidget *parent)
+: QWidget(parent), ui(new Ui::WorldListPage)
 {
 	ui->setupUi(this);
-	ui->worldTreeView->setSortingEnabled(true);
-	ui->worldTreeView->installEventFilter(this);
-}
-
-void WorldListPage::openedImpl()
-{
-}
-
-void WorldListPage::closedImpl()
-{
 }
 
 WorldListPage::~WorldListPage()
 {
 	delete ui;
-}
-
-bool WorldListPage::shouldDisplay() const
-{
-	return true;
 }

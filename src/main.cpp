@@ -1,12 +1,12 @@
-#include "poc_heap_corruption.h"
 #include <QApplication>
+#include "WorldListPage.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-    poc_heap_corruption w;
-    w.show();
+	QApplication app(argc, argv);
+	WorldListPage page;
+	page.show();
 
-    return app.exec();
+	return app.exec();
 }
 

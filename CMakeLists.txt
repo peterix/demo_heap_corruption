@@ -11,7 +11,6 @@ find_package(Qt5Widgets CONFIG REQUIRED)
 
 set(poc_heap_corruption_SRC
   src/main.cpp
-  src/poc_heap_corruption.cpp
   src/LineSeparator.cpp
   src/WorldListPage.cpp
 )
